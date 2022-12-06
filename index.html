@@ -2,7 +2,7 @@
 	<div class="video">
 	<video width=100%></video>
 </div>
-	<button style="width: 50px ; height: 30px;" onclick="baixar()">Tirar Foto</button>
+	<button style="width: 50px ; height: 30px;" onclick="foto()">Tirar Foto</button>
 </body>
 
 <script>
@@ -26,16 +26,16 @@
     	videoElement.play();
     })();
 
-	function baixar() {
 
-		var link =  document.creacteElement('a');
-		link.dowloand = "foto.png"
-		link.href = video.ToDataURL();
-		link.textContent = "Cliente para baixar Imagem"
-		document.body.appendChild(link)
+function foto() {
+    var link = document.createElement('a');
+    link.download = 'foto.png';
+    link.href = canvas.toDataURL();
+    link.textContent = 'Clique para baixar a imagem';
+    document.body.appendChild(link);
+}
 
-		
-	}
+
 </script>
 
 <style type="text/css">
