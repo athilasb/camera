@@ -1,5 +1,6 @@
 <body>
 	<video width=100%></video>
+	<button onclick="baixar()"></button>
 </body>
 
 <script>
@@ -22,6 +23,17 @@
     	videoElement.srcObject = media;
     	videoElement.play();
     })();
+	
+	function baixar() {
+
+		var link =  document.creacteElement('a');
+		link.dowloand = "foto.png"
+		link.href = video.ToDataURL();
+		link.textContent = "Cliente para baixar Imagem"
+		document.body.appendChild(link)
+
+		
+	}
 </script>
 
 <style type="text/css">
