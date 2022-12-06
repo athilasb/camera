@@ -1,5 +1,7 @@
 <body>
+	<div class="video">
 	<video width=100%></video>
+</div>
 	<button onclick="baixar()"></button>
 </body>
 
@@ -16,14 +18,14 @@
     	    media = await navigator.mediaDevices.getUserMedia({audio: false, video: true});
     	}
     	catch(e) {
-    		document.querySelector('body').textContent = e
+    		document.querySelector('.video').textContent = e
     	}
 
     	//console.log(window.URL.createObjectURL(media.getVideoTracks()[0]));
     	videoElement.srcObject = media;
     	videoElement.play();
     })();
-	
+
 	function baixar() {
 
 		var link =  document.creacteElement('a');
